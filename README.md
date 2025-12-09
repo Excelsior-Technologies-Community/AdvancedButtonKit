@@ -3,7 +3,7 @@
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9-blue?logo=kotlin&logoColor=white)](https://kotlinlang.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![API](https://img.shields.io/badge/API-21%2B-orange.svg)](#)
-[![JitPack](https://img.shields.io/github/v/release/yourusername/advanced-button-library?label=JitPack&logo=jitpack)](https://jitpack.io/#yourusername/advanced-button-library)
+[![JitPack](https://img.shields.io/github/v/release/yourusername/advanced-button-library?label=JitPack&logo=jitpack)](https://jitpack.io/#Excelsior-Technologies-Community/AdvancedButtonKit/1.0.0)
 
 **Advanced Button Library** is a powerful, lightweight, and highly customizable Android library offering modern, animated, and visually stunning button components — perfect for apps that demand beautiful UI with minimal effort.
 
@@ -46,11 +46,9 @@ allprojects {
 
 ```gradle
 dependencies {
-    implementation 'com.github.yourusername:advanced-button-library:1.0.0'
+     implementation 'com.github.Excelsior-Technologies-Community:AdvancedButtonKit:1.0.0'
 }
 ```
-
-> Replace `yourusername` with your actual GitHub username
 
 ---
 
