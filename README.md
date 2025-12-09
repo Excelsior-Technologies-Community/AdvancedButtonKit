@@ -12,13 +12,10 @@ Say goodbye to boring buttons. Say hello to **Toggle Switches**, **Gradient Butt
 
 ## Preview
 
-<div align="center">
-  <img src="app/src/main/assets/Video.gif"
+<img src="app/src/main/assets/Video.gif"
        alt="Advanced Button Library Demo" 
       height="320"/>
-  <p><strong>ToggleButton • GradientButton • LoadingButton • RippleEffectButton</strong></p>
-</div>
-
+      
 ---
 
 ## Features
