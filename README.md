@@ -13,7 +13,7 @@ Say goodbye to boring buttons. Say hello to **Toggle Switches**, **Gradient Butt
 
 ## Preview
 
-<img src="assets/Video.gif" height="320"/>
+<img src="app/src/main/assets/Video.gif" height="320"/>
 
 ---
 
