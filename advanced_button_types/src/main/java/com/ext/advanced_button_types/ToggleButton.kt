@@ -99,6 +99,8 @@ class ToggleButton @JvmOverloads constructor(
         // Remove default button background
         setBackgroundColor(ContextCompat.getColor(context, android.R.color.transparent))
         text = "" // Clear default text
+        toggledText = "ON"
+        untoggledText = "OFF"
 
         // Set click listener for toggling
         setOnClickListener {
@@ -139,7 +141,8 @@ class ToggleButton @JvmOverloads constructor(
         }
 
         // Draw thumb (circle)
-        val thumbX = padding + thumbRadius + (thumbPosition * (switchWidth - 2 * padding - 2 * thumbRadius))
+        val thumbX =
+            padding + thumbRadius + (thumbPosition * (switchWidth - 2 * padding - 2 * thumbRadius))
         val thumbY = switchHeight / 2
         canvas.drawCircle(thumbX, thumbY, thumbRadius, thumbPaint)
     }
@@ -150,6 +153,7 @@ class ToggleButton @JvmOverloads constructor(
                 parent.requestDisallowInterceptTouchEvent(true)
                 return true
             }
+
             MotionEvent.ACTION_UP -> {
                 performClick()
                 return true
