@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ToggleButton Attributes -->
+    <declare-styleable name="ToggleButton">
+        <!-- Initial toggle state (true = ON, false = OFF) -->
+        <attr name="toggle_isToggled" format="boolean" />
+
+        <!-- Background color when toggled ON -->
+        <attr name="toggle_toggledBackgroundColor" format="color" />
+
+        <!-- Background color when toggled OFF -->
+        <attr name="toggle_untoggledBackgroundColor" format="color" />
+
+        <!-- Color of the thumb (circle) -->
+        <attr name="toggle_thumbColor" format="color" />
+    </declare-styleable>
+
+    <!-- GradientButton Attributes -->
+    <declare-styleable name="GradientButton">
+        <!-- Start color of gradient -->
+        <attr name="gradient_startColor" format="color" />
+
+        <!-- End color of gradient -->
+        <attr name="gradient_endColor" format="color" />
+
+        <!-- Gradient orientation -->
+        <attr name="gradient_orientation" format="enum">
+            <enum name="leftRight" value="0" />
+            <enum name="topBottom" value="1" />
+            <enum name="tlBr" value="2" />
+            <enum name="blTr" value="3" />
+        </attr>
+
+        <!-- Corner radius for rounded corners -->
+        <attr name="gradient_cornerRadius" format="dimension" />
+    </declare-styleable>
+
+    <!-- LoadingButton Attributes -->
+    <declare-styleable name="LoadingButton">
+        <!-- Text to display during loading -->
+        <attr name="loading_loadingText" format="string" />
+
+        <!-- Background color during loading state -->
+        <attr name="loading_backgroundColor" format="color" />
+
+        <!-- Color of the circular progress bar -->
+        <attr name="loading_progressBarColor" format="color" />
+
+        <!-- Size of the circular progress bar (width and height) -->
+        <attr name="loading_progressBarSize" format="dimension" />
+    </declare-styleable>
+
+    <!-- RippleEffectButton Attributes -->
+    <declare-styleable name="RippleEffectButton">
+        <!-- Color of ripple effect -->
+        <attr name="ripple_color" format="color" />
+
+        <!-- Duration of ripple animation in milliseconds -->
+        <attr name="ripple_duration" format="integer" />
+
+        <!-- Alpha/transparency of ripple (0-255) -->
+        <attr name="ripple_alpha" format="integer" />
+    </declare-styleable>
+
+</resources>
