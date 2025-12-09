@@ -18,6 +18,7 @@ import androidx.core.content.ContextCompat
  * - Customizable colors for ON and OFF states
  * - Smooth animated transitions
  * - Works as plain toggle without text
+ * - Text can be set from XML or programmatically
  */
 class ToggleButton @JvmOverloads constructor(
     context: Context,
@@ -76,6 +77,18 @@ class ToggleButton @JvmOverloads constructor(
                     R.styleable.ToggleButton_toggle_thumbColor,
                     ContextCompat.getColor(context, android.R.color.white)
                 )
+
+                // Read text attributes from XML
+                toggledText = getString(R.styleable.ToggleButton_toggle_toggledText)
+                untoggledText = getString(R.styleable.ToggleButton_toggle_untoggledText)
+
+                // If not provided in XML, set default values
+                if (toggledText == null) {
+                    toggledText = ""
+                }
+                if (untoggledText == null) {
+                    untoggledText = ""
+                }
             } finally {
                 recycle()
             }
@@ -99,8 +112,6 @@ class ToggleButton @JvmOverloads constructor(
         // Remove default button background
         setBackgroundColor(ContextCompat.getColor(context, android.R.color.transparent))
         text = "" // Clear default text
-        toggledText = "ON"
-        untoggledText = "OFF"
 
         // Set click listener for toggling
         setOnClickListener {
@@ -210,6 +221,7 @@ class ToggleButton @JvmOverloads constructor(
      * setText("ON", "OFF") - Shows ON/OFF
      * setText("YES", "NO") - Shows YES/NO
      * setText("✓", "✗") - Shows checkmark/cross
+     * setText(null, null) - Plain toggle without text
      * setText("", "") - Plain toggle without text
      */
     fun setText(toggledText: String?, untoggledText: String?) {

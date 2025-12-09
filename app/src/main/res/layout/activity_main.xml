@@ -50,7 +50,9 @@
             app:toggle_isToggled="false"
             app:toggle_thumbColor="@android:color/white"
             app:toggle_toggledBackgroundColor="@android:color/holo_green_dark"
-            app:toggle_untoggledBackgroundColor="@android:color/holo_red_dark" />
+            app:toggle_toggledText="No"
+            app:toggle_untoggledBackgroundColor="@android:color/holo_red_dark"
+            app:toggle_untoggledText="Yes" />
 
         <!-- Divider -->
         <View
@@ -85,7 +87,7 @@
             android:text="Horizontal Gradient"
             android:textColor="@android:color/white"
             android:textSize="16sp"
-            app:gradient_cornerRadius="24dp"
+            app:button_cornerRadius="24dp"
             app:gradient_endColor="@android:color/holo_purple"
             app:gradient_orientation="leftRight"
             app:gradient_startColor="@android:color/holo_blue_dark" />
@@ -99,7 +101,7 @@
             android:text="Vertical Gradient"
             android:textColor="@android:color/white"
             android:textSize="16sp"
-            app:gradient_cornerRadius="16dp"
+            app:button_cornerRadius="16dp"
             app:gradient_endColor="@android:color/holo_red_dark"
             app:gradient_orientation="topBottom"
             app:gradient_startColor="@android:color/holo_orange_light" />
@@ -113,7 +115,7 @@
             android:text="Diagonal Gradient"
             android:textColor="@android:color/white"
             android:textSize="16sp"
-            app:gradient_cornerRadius="32dp"
+            app:button_cornerRadius="32dp"
             app:gradient_endColor="@android:color/holo_blue_light"
             app:gradient_orientation="tlBr"
             app:gradient_startColor="@android:color/holo_green_dark" />
@@ -149,11 +151,11 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/holo_blue_dark"
             android:padding="10dp"
-            android:text="Start Loading"
             android:textColor="@android:color/white"
             android:textSize="16sp"
             app:loading_progressBarColor="@android:color/white"
-            app:loading_progressBarSize="40dp" />
+            app:loading_progressBarSize="40dp"
+            app:loading_text="Start Loading" />
 
         <View
             android:layout_width="match_parent"

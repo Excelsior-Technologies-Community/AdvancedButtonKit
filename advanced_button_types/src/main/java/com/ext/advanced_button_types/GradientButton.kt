@@ -45,7 +45,7 @@ class GradientButton @JvmOverloads constructor(
                     0 // Default: LEFT_RIGHT
                 )
                 cornerRadius = getDimension(
-                    R.styleable.GradientButton_gradient_cornerRadius,
+                    R.styleable.GradientButton_button_cornerRadius,
                     16f
                 )
             } finally {

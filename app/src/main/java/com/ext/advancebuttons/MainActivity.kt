@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
     private fun setupToggleButton() {
         toggleButton.setOnToggleChangeListener { isToggled ->
             // Default ON/OFF text is already set, but you can customize it
-            toggleButton.setText("ON", "OFF")
+//            toggleButton.setText("ON", "OFF")
 
             // Show toast
             val message = if (isToggled) "Switch turned ON!" else "Switch turned OFF!"

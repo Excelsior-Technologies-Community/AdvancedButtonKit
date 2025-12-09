@@ -17,6 +17,7 @@ import androidx.core.content.ContextCompat
  * - Disables interaction during loading
  * - Smooth transition between states
  * - Fixed: No double background issue
+ * - Uses custom loading_text attribute
  */
 class LoadingButton @JvmOverloads constructor(
     context: Context,
@@ -40,6 +41,12 @@ class LoadingButton @JvmOverloads constructor(
             0, 0
         ).apply {
             try {
+                // Read loading_text attribute
+                val loadingText = getString(R.styleable.LoadingButton_loading_text)
+                if (!loadingText.isNullOrEmpty()) {
+                    originalText = loadingText
+                }
+
                 progressBarColor = getColor(
                     R.styleable.LoadingButton_loading_progressBarColor,
                     ContextCompat.getColor(context, android.R.color.white)
@@ -61,6 +68,8 @@ class LoadingButton @JvmOverloads constructor(
             )
             // Remove button's own background - FrameLayout will handle the background
             setBackgroundColor(ContextCompat.getColor(context, android.R.color.transparent))
+            // Set the text from loading_text attribute
+            text = originalText
         }
         addView(button)
 
@@ -73,9 +82,6 @@ class LoadingButton @JvmOverloads constructor(
             indeterminateDrawable?.setColorFilter(progressBarColor, PorterDuff.Mode.SRC_IN)
         }
         addView(progressBar)
-
-        // Store original text from XML
-        originalText = button.text
     }
 
     /**
@@ -123,7 +129,7 @@ class LoadingButton @JvmOverloads constructor(
     fun isLoading(): Boolean = isLoading
 
     /**
-     * Set button text
+     * Set button text programmatically
      */
     fun setText(text: CharSequence) {
         originalText = text

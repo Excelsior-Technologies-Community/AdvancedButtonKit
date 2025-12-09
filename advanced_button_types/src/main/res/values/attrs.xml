@@ -14,6 +14,12 @@
 
         <!-- Color of the thumb (circle) -->
         <attr name="toggle_thumbColor" format="color" />
+
+        <!-- Text to show when toggled ON -->
+        <attr name="toggle_toggledText" format="string" />
+
+        <!-- Text to show when toggled OFF -->
+        <attr name="toggle_untoggledText" format="string" />
     </declare-styleable>
 
     <!-- GradientButton Attributes -->
@@ -33,13 +39,13 @@
         </attr>
 
         <!-- Corner radius for rounded corners -->
-        <attr name="gradient_cornerRadius" format="dimension" />
+        <attr name="button_cornerRadius" format="dimension" />
     </declare-styleable>
 
     <!-- LoadingButton Attributes -->
     <declare-styleable name="LoadingButton">
         <!-- Text to display during loading -->
-        <attr name="loading_loadingText" format="string" />
+        <attr name="loading_text" format="string" />
 
         <!-- Background color during loading state -->
         <attr name="loading_backgroundColor" format="color" />
