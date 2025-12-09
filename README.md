@@ -64,6 +64,8 @@ dependencies {
     android:layout_height="50dp"
     app:toggle_isToggled="false"
     app:toggle_thumbColor="@android:color/white"
+    app:toggle_toggledText="No"
+    app:toggle_untoggledText="Yes"
     app:toggle_toggledBackgroundColor="#4CAF50"
     app:toggle_untoggledBackgroundColor="#F44336" />
 ```
@@ -95,7 +97,7 @@ toggleButton.setText("", "")
     app:gradient_startColor="#8E2DE2"
     app:gradient_endColor="#4A00E0"
     app:gradient_orientation="tlBr"
-    app:gradient_cornerRadius="32dp" />
+    app:button_cornerRadius="32dp" />
 ```
 
 **Supported orientations:**
@@ -117,7 +119,7 @@ gradientButton.setGradientOrientation(3) // blTr
     android:id="@+id/loadingButton"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="Submit"
+    app:loading_text="Start Loading"
     android:textColor="@android:color/white"
     app:loading_progressBarColor="@android:color/white"
     app:loading_progressBarSize="48dp" />
@@ -171,12 +173,16 @@ Works on all API levels · No XML ripple drawable needed
 |                       | `toggle_toggledBackgroundColor`      | color       | Background when ON                  |
 |                       | `toggle_untoggledBackgroundColor`    | color       | Background when OFF                 |
 |                       | `toggle_thumbColor`                  | color       | Thumb (circle) color                |
+|                       | `toggle_toggledText`                 | string      | Toggled text (sp)                   |
+|                       | `toggle_untoggledText`               | string      | Untoggled text (sp)                 |
 | `GradientButton`      | `gradient_startColor`                | color       | Start gradient color                |
 |                       | `gradient_endColor`                  | color       | End gradient color                  |
 |                       | `gradient_orientation`               | enum        | leftRight / topBottom / tlBr / blTr |
-|                       | `gradient_cornerRadius`              | dimension   | Corner radius                       |
+|                       | `button_cornerRadius`                | dimension   | Corner radius                       |
 | `LoadingButton`       | `loading_progressBarColor`           | color       | Spinner color                       |
 |                       | `loading_progressBarSize`            | dimension   | Spinner size (dp)                   |
+|                       | `loading_text`                       | string      | Loading text (sp)                   |
+|                       | `loading_backgroundColor`            | color       | Background color                    |
 | `RippleEffectButton`  | `ripple_color`                       | color       | Ripple color                        |
 |                       | `ripple_duration`                    | integer     | Animation duration (ms)             |
 |                       | `ripple_alpha`                       | integer     | Ripple transparency (0–255)         |
