@@ -48,7 +48,7 @@ allprojects {
 
 ```gradle
 dependencies {
-     implementation 'com.github.Excelsior-Technologies-Community:AdvancedButtonKit:1.0.2'
+     implementation 'com.github.Excelsior-Technologies-Community:AdvancedButtonKit:1.0.3'
 }
 ```
 
