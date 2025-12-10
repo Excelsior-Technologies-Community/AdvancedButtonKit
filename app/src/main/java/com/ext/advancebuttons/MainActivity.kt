@@ -2,7 +2,6 @@ package com.ext.advancebuttons
 
 import android.os.Bundle
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.ext.advanced_button_types.GradientButton
 import com.ext.advanced_button_types.LoadingButton
@@ -64,10 +63,6 @@ class MainActivity : AppCompatActivity() {
         toggleButton.setOnToggleChangeListener { isToggled ->
             // Default ON/OFF text is already set, but you can customize it
 //            toggleButton.setText("ON", "OFF")
-
-            // Show toast
-            val message = if (isToggled) "Switch turned ON!" else "Switch turned OFF!"
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -77,8 +72,6 @@ class MainActivity : AppCompatActivity() {
     private fun setupGradientButtons() {
         // Gradient Button 1 - Horizontal
         gradientButton1.setOnClickListener {
-            Toast.makeText(this, "Horizontal Gradient Button Clicked!", Toast.LENGTH_SHORT).show()
-
             // Demo: Change gradient colors programmatically
             gradientButton1.setGradientColors(
                 android.graphics.Color.parseColor("#FF6B6B"),
@@ -88,16 +81,12 @@ class MainActivity : AppCompatActivity() {
 
         // Gradient Button 2 - Vertical
         gradientButton2.setOnClickListener {
-            Toast.makeText(this, "Vertical Gradient Button Clicked!", Toast.LENGTH_SHORT).show()
-
             // Demo: Change corner radius
             gradientButton2.setCornerRadius(48f)
         }
 
         // Gradient Button 3 - Diagonal
         gradientButton3.setOnClickListener {
-            Toast.makeText(this, "Diagonal Gradient Button Clicked!", Toast.LENGTH_SHORT).show()
-
             // Demo: Change orientation
             gradientButton3.setGradientOrientation(3) // BL_TR
         }
@@ -110,7 +99,6 @@ class MainActivity : AppCompatActivity() {
         loadingButton.setOnClickListener {
             // Prevent multiple clicks while loading
             if (loadingButton.isLoading()) {
-                Toast.makeText(this, "Already loading...", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
@@ -121,13 +109,6 @@ class MainActivity : AppCompatActivity() {
             loadingButton.postDelayed({
                 // Stop loading - hides progress bar, shows text
                 loadingButton.stopLoading()
-
-                // Show completion message
-                Toast.makeText(
-                    this,
-                    "Operation completed successfully!",
-                    Toast.LENGTH_SHORT
-                ).show()
             }, 3000) // 3 second delay
         }
     }
@@ -145,13 +126,10 @@ class MainActivity : AppCompatActivity() {
             when {
                 clickCount % 10 == 0 -> {
                     rippleButton.setRippleColor(android.graphics.Color.YELLOW)
-                    Toast.makeText(this, "Milestone: $clickCount clicks!", Toast.LENGTH_SHORT)
-                        .show()
                 }
 
                 clickCount % 5 == 0 -> {
                     rippleButton.setRippleColor(android.graphics.Color.WHITE)
-                    Toast.makeText(this, "Great! $clickCount clicks!", Toast.LENGTH_SHORT).show()
                 }
             }
         }
@@ -161,7 +139,6 @@ class MainActivity : AppCompatActivity() {
             clickCount = 0
             rippleClickCount.text = "Clicks: 0"
             rippleButton.setRippleColor(android.graphics.Color.WHITE)
-            Toast.makeText(this, "Counter reset!", Toast.LENGTH_SHORT).show()
             true
         }
     }
